@@ -1,0 +1,131 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1b2430;
+    padding:25px 80px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
+}
+
+.logo{
+    height: 76px;
+    width: 250px;
+    position:fixed;
+    left: 0px;
+}
+
+ #navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+ #navbar li{
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:white;
+    transition: 0.3s ease-in-out;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+ color:rgba(0,0,3,1);
+ text-decoration: underline;
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after{ 
+    content: "";
+    background-color: aqua;
+    color: aqua;
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 20px; 
+}
+
+.social-media-desktop{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media ul{
+list-style: none;
+}
+
+.social-media ul li{
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+}
+
+.social-media ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:white;
+    transition: 0.3s ease-in-out;
+}
+
+.hamburger-menu{
+display: none;
+}
+
+@media screen and (max-width:769px){
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 90px;
+        right: -300px;
+        width:300px;
+        height:100vh;
+        background-color: #1b2430;;
+        box-shadow: 0px 40px 60px rgba(0,0,0,0.1);
+        /* box-shadow: rgba(50,50,93,0.25)0px 50px 100px -20px,
+        rgba(0,0,0,0.3) 0px 30px 60px -30px; */
+        padding: 40px 0px 0px 10px;
+        transition: 0.3s ease-in-out;  
+    }
+
+    #navbar.active{
+        right:0px;
+    }
+
+
+    .hamburger-menu{
+        display: block;
+        font-size: 30px;
+        margin-left: 93vw;
+        cursor: pointer;
+        }
+
+        #navbar li{
+            margin-left: auto;
+            margin-bottom: 32px;
+        }
+
+        .social-media{
+            display:none;
+        }
+
+
+        
+}
