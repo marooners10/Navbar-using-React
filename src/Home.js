@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import "./navbar.css"
 import Hero from "./Hero";
+import Content from "./Content";
 const Home=(props)=>{
     return<div>
         <Navbar/>
@@ -14,6 +15,7 @@ const Home=(props)=>{
         url="#"
         btnClass="show"
         />
+        <Content/>
         </div>
 }
 
